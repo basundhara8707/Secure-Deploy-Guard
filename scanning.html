@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SDG AI Scan</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="scanning.css">
+
+<script defer src="scanning.js"></script>
+
+</head>
+
+<body>
+
+<div class="scan-page">
+
+<!-- ========================================= -->
+<!-- TOP NAVBAR -->
+<!-- ========================================= -->
+
+<header class="topbar">
+
+<div class="logo">
+
+🛡 Secure Deploy Guard
+
+</div>
+
+<div class="scan-status">
+
+<div class="live-dot"></div>
+
+LIVE SCAN
+
+</div>
+
+</header>
+
+<!-- ========================================= -->
+<!-- PROGRESS -->
+<!-- ========================================= -->
+
+<section class="progress-section">
+
+<h1>
+
+AI Security Analysis In Progress
+
+</h1>
+
+<p>
+
+Scanning source code, dependencies, infrastructure and secrets...
+
+</p>
+
+<div class="progress">
+
+<div class="progress-fill" id="progressFill"></div>
+
+</div>
+
+<div class="progress-text">
+
+<span id="progressNumber">
+
+0%
+
+</span>
+
+Completed
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- AGENTS -->
+<!-- ========================================= -->
+
+<section class="agents-grid">
+
+<div class="agent-card" id="agent1">
+
+<div class="icon">
+
+🤖
+
+</div>
+
+<h2>SAST Agent</h2>
+
+<p class="status">
+
+Initializing...
+
+</p>
+
+</div>
+
+<div class="agent-card" id="agent2">
+
+<div class="icon">
+
+📦
+
+</div>
+
+<h2>SCA Agent</h2>
+
+<p class="status">
+
+Waiting...
+
+</p>
+
+</div>
+
+<div class="agent-card" id="agent3">
+
+<div class="icon">
+
+🐳
+
+</div>
+
+<h2>Docker Agent</h2>
+
+<p class="status">
+
+Waiting...
+
+</p>
+
+</div>
+
+<div class="agent-card" id="agent4">
+
+<div class="icon">
+
+🔑
+
+</div>
+
+<h2>Secrets Scanner</h2>
+
+<p class="status">
+
+Waiting...
+
+</p>
+
+</div>
+
+<div class="agent-card" id="agent5">
+
+<div class="icon">
+
+🔴
+
+</div>
+
+<h2>Red Team</h2>
+
+<p class="status">
+
+Waiting...
+
+</p>
+
+</div>
+
+<div class="agent-card" id="agent6">
+
+<div class="icon">
+
+🔵
+
+</div>
+
+<h2>Blue Team</h2>
+
+<p class="status">
+
+Waiting...
+
+</p>
+
+</div>
+
+<div class="agent-card" id="agent7">
+
+<div class="icon">
+
+🟢
+
+</div>
+
+<h2>Green Team</h2>
+
+<p class="status">
+
+Waiting...
+
+</p>
+
+</div>
+
+<div class="agent-card" id="agent8">
+
+<div class="icon">
+
+🧠
+
+</div>
+
+<h2>LLM Judge</h2>
+
+<p class="status">
+
+Waiting...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- DASHBOARD -->
+<!-- ========================================= -->
+
+<section class="dashboard">
+
+<div class="left-panel">
+
+<div class="terminal">
+
+<div class="terminal-header">
+
+LIVE TERMINAL
+
+</div>
+
+<div class="terminal-body" id="terminal">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="right-panel">
+
+<div class="stats">
+
+<div class="stat-card">
+
+<h3>
+
+Files Scanned
+
+</h3>
+
+<div class="number" id="files">
+
+0
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Threats Found
+
+</h3>
+
+<div class="number" id="threats">
+
+0
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Trust Score
+
+</h3>
+
+<div class="number trust" id="trust">
+
+100%
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+CPU Usage
+
+</h3>
+
+<div class="number" id="cpu">
+
+0%
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Memory
+
+</h3>
+
+<div class="number" id="memory">
+
+0%
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Elapsed Time
+
+</h3>
+
+<div class="number" id="time">
+
+00:00
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- VULNERABILITIES -->
+<!-- ========================================= -->
+
+<section class="findings">
+
+<h2>
+
+Detected Vulnerabilities
+
+</h2>
+
+<div id="findingList">
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- SCAN TIMELINE -->
+<!-- ========================================= -->
+
+<section class="timeline">
+
+<h2>
+
+AI Execution Timeline
+
+</h2>
+
+<div class="timeline-box">
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+Initializing Orchestrator
+
+</div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+Loading MCP Servers
+
+</div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+Starting SAST
+
+</div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+Dependency Analysis
+
+</div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+Docker Scan
+
+</div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+Secret Detection
+
+</div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+Trust Score Calculation
+
+</div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+Generating Report
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- SCAN COMPLETE -->
+<!-- ========================================= -->
+
+<section class="complete-box">
+
+<h2>
+
+Scan Completion
+
+</h2>
+
+<p id="completeText">
+
+Running...
+
+</p>
+
+<button id="dashboardBtn">
+
+View Security Dashboard →
+
+</button>
+
+</section>
+
+</div>
+
+</body>
+
+</html>

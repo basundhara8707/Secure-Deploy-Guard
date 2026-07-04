@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>SDG Security Report</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="report.css">
+
+<script defer src="report.js"></script>
+
+</head>
+
+<body>
+
+<header class="report-header">
+
+<h1>🛡 Secure Deploy Guard</h1>
+
+<div class="badge">
+
+Deployment Blocked
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>
+
+Security Scan Report
+
+</h1>
+
+<p>
+
+AI Generated Pre-Deployment Security Assessment
+
+</p>
+
+</section>
+
+<section class="summary">
+
+<div class="card">
+
+<h2>Trust Score</h2>
+
+<h1 id="trustScore">82%</h1>
+
+</div>
+
+<div class="card">
+
+<h2>Files Scanned</h2>
+
+<h1 id="files">418</h1>
+
+</div>
+
+<div class="card">
+
+<h2>Threats</h2>
+
+<h1 id="issues">19</h1>
+
+</div>
+
+<div class="card">
+
+<h2>Duration</h2>
+
+<h1>01:18</h1>
+
+</div>
+
+</section>
+
+<section class="decision">
+
+<h2>Deployment Decision</h2>
+
+<div class="decision-box">
+
+🚫 BLOCK DEPLOYMENT
+
+</div>
+
+<p>
+
+Critical vulnerabilities were detected during the scan.
+
+Deployment is not recommended until the issues are resolved.
+
+</p>
+
+</section>
+
+<section class="recommendations">
+
+<h2>AI Recommendations</h2>
+
+<ul>
+
+<li>Move all API keys to environment variables.</li>
+
+<li>Use parameterized SQL queries.</li>
+
+<li>Add USER instruction inside Dockerfile.</li>
+
+<li>Enable HEALTHCHECK.</li>
+
+<li>Upgrade vulnerable dependencies.</li>
+
+<li>Enable MFA for production deployment.</li>
+
+<li>Rotate exposed credentials immediately.</li>
+
+</ul>
+
+</section>
+
+<section class="report-table">
+
+<h2>Executive Summary</h2>
+
+<table>
+
+<tr>
+
+<th>Severity</th>
+
+<th>Count</th>
+
+</tr>
+
+<tr>
+
+<td>Critical</td>
+
+<td>1</td>
+
+</tr>
+
+<tr>
+
+<td>High</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td>Medium</td>
+
+<td>5</td>
+
+</tr>
+
+<tr>
+
+<td>Low</td>
+
+<td>11</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="exports">
+
+<button id="pdf">
+
+📄 Export PDF
+
+</button>
+
+<button id="json">
+
+📦 Export JSON
+
+</button>
+
+<button id="sbom">
+
+🛡 Export SBOM
+
+</button>
+
+</section>
+
+<footer>
+
+Secure Deploy Guard © 2026
+
+</footer>
+
+</body>
+
+</html>

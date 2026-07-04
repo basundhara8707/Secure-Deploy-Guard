@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SDG Security Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="dashboard.css">
+
+<script defer src="dashboard.js"></script>
+
+</head>
+
+<body>
+
+<header class="dash-header">
+
+<div class="logo">
+
+🛡 Secure Deploy Guard
+
+</div>
+
+<div class="status">
+
+<span class="online"></span>
+
+Deployment Blocked
+
+</div>
+
+</header>
+
+<!-- ========================= -->
+
+<section class="hero">
+
+<div class="gauge-card">
+
+<div class="gauge">
+
+<svg>
+
+<circle class="bg" cx="100" cy="100" r="80"></circle>
+
+<circle class="meter" cx="100" cy="100" r="80"></circle>
+
+</svg>
+
+<div class="score">
+
+82%
+
+</div>
+
+</div>
+
+<h2>
+
+Trust Score
+
+</h2>
+
+</div>
+
+<div class="summary">
+
+<div class="summary-card critical">
+
+<h3>
+
+Critical
+
+</h3>
+
+<h1 id="critical">
+
+1
+
+</h1>
+
+</div>
+
+<div class="summary-card high">
+
+<h3>
+
+High
+
+</h3>
+
+<h1 id="high">
+
+2
+
+</h1>
+
+</div>
+
+<div class="summary-card medium">
+
+<h3>
+
+Medium
+
+</h3>
+
+<h1 id="medium">
+
+3
+
+</h1>
+
+</div>
+
+<div class="summary-card low">
+
+<h3>
+
+Low
+
+</h3>
+
+<h1 id="low">
+
+4
+
+</h1>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<section class="charts">
+
+<div class="chart-card">
+
+<h2>
+
+Security Score Trend
+
+</h2>
+
+<canvas id="trendCanvas"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h2>
+
+Threat Distribution
+
+</h2>
+
+<canvas id="pieCanvas"></canvas>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<section class="judge">
+
+<div class="judge-card">
+
+<h2>
+
+🧠 AI Judge Recommendation
+
+</h2>
+
+<p>
+
+The deployment contains one critical vulnerability and multiple high-risk findings.
+
+</p>
+
+<p>
+
+Recommendation:
+
+<strong>
+
+BLOCK DEPLOYMENT
+
+</strong>
+
+</p>
+
+</div>
+
+<div class="green-card">
+
+<h2>
+
+🟢 Green Team Suggestions
+
+</h2>
+
+<ul>
+
+<li>Move AWS Keys to Environment Variables</li>
+
+<li>Use Prepared SQL Statements</li>
+
+<li>Add Docker USER Instruction</li>
+
+<li>Enable HEALTHCHECK</li>
+
+<li>Update Vulnerable Packages</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<section class="table-section">
+
+<h2>
+
+Detected Findings
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Severity</th>
+
+<th>Issue</th>
+
+<th>File</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody">
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ========================= -->
+
+<section class="downloads">
+
+<button>
+
+⬇ Download Report
+
+</button>
+
+<button>
+
+⬇ Download JSON
+
+</button>
+
+<button>
+
+⬇ Download SBOM
+
+</button>
+
+</section>
+
+</body>
+
+</html>

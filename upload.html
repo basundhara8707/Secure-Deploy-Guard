@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Upload Project | Secure Deploy Guard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script defer src="upload.js"></script>
+
+</head>
+
+<body>
+
+<div class="upload-container">
+
+<h1>🛡 Secure Deploy Guard</h1>
+
+<p class="subtitle">
+Upload your project for an AI-powered security scan
+</p>
+
+<div class="upload-card">
+
+<div id="drop-area">
+
+<div class="upload-icon">📂</div>
+
+<h2>Drag & Drop your Project</h2>
+
+<p>or</p>
+
+<input type="file" id="fileInput" hidden>
+
+<button id="browseBtn">Browse Files</button>
+
+<p id="filename">No file selected</p>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="repo-section">
+
+<label>GitHub Repository</label>
+
+<input
+type="text"
+placeholder="https://github.com/username/project">
+
+<label>Branch</label>
+
+<select>
+
+<option>Main</option>
+
+<option>Development</option>
+
+<option>Production</option>
+
+</select>
+
+<label>Environment</label>
+
+<select>
+
+<option>Local</option>
+
+<option>CI</option>
+
+<option>Staging</option>
+
+<option>Production</option>
+
+</select>
+
+<button id="scanBtn">
+
+🚀 Start AI Scan
+
+</button>
+
+</div>
+
+</div>
+
+<div class="progress-box">
+
+<div class="progress">
+
+<div class="progress-fill"></div>
+
+</div>
+
+<p id="progressText">
+
+Waiting for upload...
+
+</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
